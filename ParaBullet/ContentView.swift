@@ -32,12 +32,26 @@ struct ContentView: View {
                     .frame(minWidth: 300, minHeight: 150)
                     .cornerRadius(8)
                     .padding()
+#if os(iOS)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.secondary, lineWidth: 1)
+                )
+#endif
+
                 List(bulletPoints, id: \.self, rowContent: { point in
                     Text(point)
+                        .listRowBackground(Color.clear)
                 })
                 .frame(minWidth: 300, minHeight: 150)
                 .cornerRadius(8)
                 .padding()
+#if os(iOS)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.secondary, lineWidth: 1)
+                )
+#endif
             }
 
             VStack {
@@ -103,8 +117,18 @@ struct ContentView: View {
 
     func copyToClipboard() {
         let bulletPointsText = bulletPoints.joined(separator: "\n")
+#if os(iOS)
+        let pasteboard = UIPasteboard.general
+        // Clear the current contents of the pasteboard (if needed)
+        pasteboard.string = nil
+        // Set the new string to the pasteboard
+        pasteboard.string = bulletPointsText
+#elseif os(macOS)
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(bulletPointsText, forType: .string)
+#else
+        print("OMG, it's that mythical new Apple product!!!")
+#endif
     }
 }
 

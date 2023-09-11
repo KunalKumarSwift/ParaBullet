@@ -47,6 +47,8 @@
 		5F67BF172AACE2C0000A094A /* ParaBulletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITests.swift; sourceTree = "<group>"; };
 		5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5F67BF272AAD0F12000A094A /* TextGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGradient.swift; sourceTree = "<group>"; };
+		5FD1B1082AAF80DC00664D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5FFF789F2AAFB684000D8D0D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,8 @@
 		5F67BEFA2AACE2BE000A094A /* ParaBullet */ = {
 			isa = PBXGroup;
 			children = (
+				5FFF789E2AAFB662000D8D0D /* Documents */,
+				5FD1B1082AAF80DC00664D34 /* Info.plist */,
 				5F67BF262AAD0EF2000A094A /* ViewModifier */,
 				5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */,
 				5F67BEFD2AACE2BE000A094A /* ContentView.swift */,
@@ -138,6 +142,14 @@
 				5F67BF272AAD0F12000A094A /* TextGradient.swift */,
 			);
 			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		5FFF789E2AAFB662000D8D0D /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				5FFF789F2AAFB684000D8D0D /* README.md */,
+			);
+			path = Documents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +374,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -420,6 +434,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -446,8 +462,13 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParaBullet/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphoneos*]" = LaunchScreen.storyboard;
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=macosx*]" = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -483,8 +504,13 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ParaBullet/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphoneos*]" = LaunchScreen.storyboard;
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=macosx*]" = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

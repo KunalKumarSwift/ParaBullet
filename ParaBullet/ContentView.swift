@@ -92,6 +92,19 @@ struct ContentView: View {
         return TextEditor(text: $inputParagraph)
             .cornerRadius(16)
 #if os(iOS)
+            .toolbar {
+                ToolbarItem(placement: .keyboard) {
+                    Spacer()
+                }
+                ToolbarItem(placement: .keyboard) {
+                    VStack(alignment: .trailing) {
+                        Button("Done") {
+                            hideKeyboard()
+                        }
+                    }
+                }
+            }
+
         .overlay(
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color.secondary, lineWidth: 1)

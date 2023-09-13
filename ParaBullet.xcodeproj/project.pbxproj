@@ -18,6 +18,7 @@
 		5F67BF182AACE2C0000A094A /* ParaBulletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF172AACE2C0000A094A /* ParaBulletUITests.swift */; };
 		5F67BF1A2AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */; };
 		5F67BF282AAD0F12000A094A /* TextGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF272AAD0F12000A094A /* TextGradient.swift */; };
+		5F6AF0C92AB2187400E424CD /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5F67BF172AACE2C0000A094A /* ParaBulletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITests.swift; sourceTree = "<group>"; };
 		5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5F67BF272AAD0F12000A094A /* TextGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGradient.swift; sourceTree = "<group>"; };
+		5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		5FD1B1082AAF80DC00664D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5FFF789F2AAFB684000D8D0D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 			children = (
 				5F67BF272AAD0F12000A094A /* TextGradient.swift */,
 				5F0C58C32AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift */,
+				5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				5F67BF282AAD0F12000A094A /* TextGradient.swift in Sources */,
 				5F0C58C22AB0F3D700A2C9EE /* AdaptableScrollView.swift in Sources */,
 				5F67BEFE2AACE2BE000A094A /* ContentView.swift in Sources */,
+				5F6AF0C92AB2187400E424CD /* HideKeyboard.swift in Sources */,
 				5F67BEFC2AACE2BE000A094A /* ParaBulletApp.swift in Sources */,
 				5F0C58C02AB0EC8200A2C9EE /* AdaptableStack.swift in Sources */,
 				5F0C58C42AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift in Sources */,

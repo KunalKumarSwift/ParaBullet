@@ -19,6 +19,7 @@
 		5F67BF1A2AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */; };
 		5F67BF282AAD0F12000A094A /* TextGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF272AAD0F12000A094A /* TextGradient.swift */; };
 		5F6AF0C92AB2187400E424CD /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */; };
+		5F6AF0CB2AB2483A00E424CD /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5F67BF272AAD0F12000A094A /* TextGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGradient.swift; sourceTree = "<group>"; };
 		5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+		5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		5FD1B1082AAF80DC00664D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5FFF789F2AAFB684000D8D0D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 				5F67BF262AAD0EF2000A094A /* ViewModifier */,
 				5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */,
 				5F67BEFD2AACE2BE000A094A /* ContentView.swift */,
+				5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */,
 				5F67BEFF2AACE2BF000A094A /* Assets.xcassets */,
 				5F67BF042AACE2BF000A094A /* ParaBullet.entitlements */,
 				5F67BF012AACE2BF000A094A /* Preview Content */,
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6AF0CB2AB2483A00E424CD /* ContentViewModel.swift in Sources */,
 				5F67BF282AAD0F12000A094A /* TextGradient.swift in Sources */,
 				5F0C58C22AB0F3D700A2C9EE /* AdaptableScrollView.swift in Sources */,
 				5F67BEFE2AACE2BE000A094A /* ContentView.swift in Sources */,

@@ -6,90 +6,129 @@
 //
 
 import SwiftUI
-
-struct ContentView: View {
-    @State private var inputParagraph = ""
-    @State private var bulletPoints: [String] = []
-    @State private var isAnimating = false
-    @State private var addExtraSpace = false
-    @State private var selectedBulletType = "•"
-
-    var body: some View {
-            GeometryReader { proxy in
-                AdaptableScrollView {
-                    VStack {
-                        Text("ParaBullet")
-                            .font(.title)
-                            .bold()
-                            .textGradient(colors:
-                                            [
-                                                Color.green,
-                                                Color.blue
-                                            ],
-                                          startPoint: .topLeading,
-                                          endPoint: .topTrailing
-                            )
-                        textWithListView(proxy: proxy)
-                            .frame(maxHeight: .infinity)
-                            .padding()
-
-                        VStack(alignment: .leading) {
-                            Text("Select Bullet Type:")
-                            Picker("", selection: $selectedBulletType) {
-                                Text("•").tag("•")
-                                Text("Numbered List").tag("Numbered List")
-                                Text("➡️").tag("➡️")
-                                Text("⭐️").tag("⭐️")
-                                Text("✅").tag("✅")
-                                Text("⚽️").tag("⚽️")
-                                Text("🏀").tag("🏀")
-                            }
-                            .adaptablePickerStyle(geometry: proxy, widthThreshold: 450)
 #if os(iOS)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(Color.accentColor, lineWidth: 1)
-                                    )
+import UIKit
 #endif
 
-                            AdaptableStack(proxy, widthThreshold: 1000) {
-                                Toggle(isOn: $addExtraSpace) {
-                                    Text("Add Extra Space")
+struct ContentView: View {
+    @StateObject private var viewModel = ContentViewModel()
+    @State private var presentSheet = false
+
+    var body: some View {
+        GeometryReader { proxy in
+            AdaptableScrollView {
+                VStack {
+                    Text("ParaBullet")
+                        .font(.title)
+                        .bold()
+                        .textGradient(colors:
+                                        [
+                                            Color.green,
+                                            Color.blue
+                                        ],
+                                      startPoint: .topLeading,
+                                      endPoint: .topTrailing
+                        )
+                    textWithListView(proxy: proxy)
+                        .frame(maxHeight: .infinity)
+                        .padding()
+
+                    VStack(alignment: .leading) {
+                        Text("Select Bullet Type:")
+                        Picker("", selection: $viewModel.selectedBulletType) {
+                            Text("•").tag("•")
+                            Text("Numbered List").tag("Numbered List")
+                            Text("➡️").tag("➡️")
+                            Text("⭐️").tag("⭐️")
+                            Text("✅").tag("✅")
+                            Text("⚽️").tag("⚽️")
+                            Text("🏀").tag("🏀")
+                        }
+                        .adaptablePickerStyle(geometry: proxy, widthThreshold: 450)
+#if os(iOS)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.accentColor, lineWidth: 1)
+                        )
+#endif
+
+                        AdaptableStack(proxy, widthThreshold: 450) {
+                            Toggle(isOn: $viewModel.addExtraSpace) {
+                                Text("Add Extra Space")
+                            }
+                            HStack {
+                                Button("Create Bullet Points") {
+                                    viewModel.bulletPoints = viewModel.paragraphToBulletPoints(viewModel.inputParagraph)
                                 }
-                                Button("Convert to Bullet Points") {
-                                    bulletPoints = paragraphToBulletPoints(inputParagraph)
-                                }
+                                .frame(maxWidth: .infinity)
                                 .padding()
 
 #if os(iOS)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(Color.accentColor, lineWidth: 1)
-                                    )
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.accentColor, lineWidth: 1)
+                                )
 #endif
 
                                 Button("Copy to Clipboard") {
-                                    copyToClipboard()
+                                    viewModel.copyToClipboard()
                                 }
+                                .frame(maxWidth: .infinity)
                                 .padding()
 
 #if os(iOS)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(Color.accentColor, lineWidth: 1)
-                                    )
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.accentColor, lineWidth: 1)
+                                )
+#endif
+                            }
+                            HStack {
+                                Button("Clear Text") {
+                                    viewModel.inputParagraph = ""
+                                    viewModel.bulletPoints = []
+                                }
+                                .frame(maxWidth: .infinity)
+                                .padding()
+#if os(iOS)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.accentColor, lineWidth: 1)
+                                )
 #endif
 
+                                Button("Share List") {
+                                    viewModel.shareList()
+                                }
+                                .frame(maxWidth: .infinity)
+                                .padding()
+#if os(iOS)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.accentColor, lineWidth: 1)
+                                ).frame(maxWidth: .infinity)
+#endif
                             }
+                        }
 
-                        }.padding()
-                    }
-                }.background(Color("Background"))
+                    }.padding()
+                }
             }
+            .background(Color("Background"))
+#if os(macOS)
+            .alert(isPresented: $viewModel.isAlertPresented) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text("Key window is not available."),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
+#endif
+        }
     }
 
     var textEditor: some View {
-        return TextEditor(text: $inputParagraph)
+        return TextEditor(text: $viewModel.inputParagraph)
             .cornerRadius(16)
 #if os(iOS)
             .toolbar {
@@ -105,15 +144,15 @@ struct ContentView: View {
                 }
             }
 
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.secondary, lineWidth: 1)
-        )
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.secondary, lineWidth: 1)
+            )
 #endif
     }
 
     var list: some View {
-        List(bulletPoints, id: \.self, rowContent: { point in
+        List(viewModel.bulletPoints, id: \.self, rowContent: { point in
             Text(point)
                 .listRowBackground(Color.clear)
         })
@@ -126,10 +165,6 @@ struct ContentView: View {
 #endif
     }
 
-    var extraSpace: String {
-        return $addExtraSpace.wrappedValue == true ? "\n" : ""
-    }
-
     func textWithListView(proxy: GeometryProxy) -> some View {
 
         AdaptableStack(proxy) {
@@ -140,55 +175,18 @@ struct ContentView: View {
     }
 
     func minimumHeight(proxy: GeometryProxy) -> CGFloat {
-        #if os(iOS)
+#if os(iOS)
         if UIDevice.current.userInterfaceIdiom == .pad {
             return proxy.size.height * 0.75
         } else {
             if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
-                 return proxy.size.height * 0.45
+                return proxy.size.height * 0.70
             } else {
-                return proxy.size.height * 0.50
+                return proxy.size.height * 0.70
             }
         }
-        #else
-        return 150.0
-        #endif
-    }
-
-    func paragraphToBulletPoints(_ paragraph: String) -> [String] {
-        var bulletPoints = [String]()
-        var currentSentence = ""
-        var counter = 1
-        for character in paragraph {
-            currentSentence.append(character)
-
-            var bulletPointer = selectedBulletType
-
-            if selectedBulletType == "Numbered List" {
-                bulletPointer = "\(counter)"
-            }
-
-            if character == "." || character == "?" {
-                bulletPoints.append(bulletPointer + "    " + currentSentence.trimmingCharacters(in: .whitespacesAndNewlines) + extraSpace)
-                currentSentence = ""
-                counter += 1
-            }
-        }
-
-        return bulletPoints.filter { !$0.isEmpty }
-    }
-
-    func copyToClipboard() {
-        let bulletPointsText = bulletPoints.joined(separator: "\n")
-#if os(iOS)
-        let pasteboard = UIPasteboard.general
-        pasteboard.string = nil
-        pasteboard.string = bulletPointsText
-#elseif os(macOS)
-        NSPasteboard.general.clearContents()
-        NSPasteboard.general.setString(bulletPointsText, forType: .string)
 #else
-        print("OMG, it's that mythical new Apple product!!!")
+        return 150.0
 #endif
     }
 }

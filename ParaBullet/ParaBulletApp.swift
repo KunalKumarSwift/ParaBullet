@@ -14,4 +14,9 @@ struct ParaBulletApp: App {
             ContentView()
         }
     }
+#if os(iOS)
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+    }
+#endif
 }

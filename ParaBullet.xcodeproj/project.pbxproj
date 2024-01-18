@@ -39,6 +39,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5FB36E2C2ABFF11D00D8A032 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5F0C58BF2AB0EC8200A2C9EE /* AdaptableStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableStack.swift; sourceTree = "<group>"; };
 		5F0C58C12AB0F3D700A2C9EE /* AdaptableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableScrollView.swift; sourceTree = "<group>"; };
@@ -57,6 +70,8 @@
 		5F67BF272AAD0F12000A094A /* TextGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGradient.swift; sourceTree = "<group>"; };
 		5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		5FB36E182ABFF11A00D8A032 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5FB36E1A2ABFF11A00D8A032 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		5FD1B1082AAF80DC00664D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5FFF789F2AAFB684000D8D0D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +116,7 @@
 				5F67BEFA2AACE2BE000A094A /* ParaBullet */,
 				5F67BF0C2AACE2C0000A094A /* ParaBulletTests */,
 				5F67BF162AACE2C0000A094A /* ParaBulletUITests */,
+				5FB36E172ABFF11A00D8A032 /* Frameworks */,
 				5F67BEF92AACE2BE000A094A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,6 +183,15 @@
 			path = ViewModifier;
 			sourceTree = "<group>";
 		};
+		5FB36E172ABFF11A00D8A032 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FB36E182ABFF11A00D8A032 /* WidgetKit.framework */,
+				5FB36E1A2ABFF11A00D8A032 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5FFF789E2AAFB662000D8D0D /* Documents */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +210,7 @@
 				5F67BEF42AACE2BE000A094A /* Sources */,
 				5F67BEF52AACE2BE000A094A /* Frameworks */,
 				5F67BEF62AACE2BE000A094A /* Resources */,
+				5FB36E2C2ABFF11D00D8A032 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -238,7 +264,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					5F67BEF72AACE2BE000A094A = {
@@ -476,6 +502,7 @@
 		5F67BF1E2AACE2C0000A094A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -517,6 +544,7 @@
 		5F67BF1F2AACE2C0000A094A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;

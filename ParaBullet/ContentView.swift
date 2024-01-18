@@ -13,6 +13,11 @@ import UIKit
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
     @State private var presentSheet = false
+    let showShare: Bool
+
+    init(showShare: Bool = true) {
+        self.showShare = showShare
+    }
 
     var body: some View {
         GeometryReader { proxy in
@@ -52,7 +57,7 @@ struct ContentView: View {
                         )
 #endif
 
-                        AdaptableStack(proxy, widthThreshold: 450) {
+                        AdaptableStack(proxy, widthThreshold: 300) {
                             Toggle(isOn: $viewModel.addExtraSpace) {
                                 Text("Add Extra Space")
                             }
@@ -96,18 +101,19 @@ struct ContentView: View {
                                         .stroke(Color.accentColor, lineWidth: 1)
                                 )
 #endif
-
-                                Button("Share List") {
-                                    viewModel.shareList()
-                                }
-                                .frame(maxWidth: .infinity)
-                                .padding()
+                                if showShare {
+                                    Button("Share List") {
+                                        viewModel.shareList()
+                                    }
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
 #if os(iOS)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(Color.accentColor, lineWidth: 1)
-                                ).frame(maxWidth: .infinity)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(Color.accentColor, lineWidth: 1)
+                                    ).frame(maxWidth: .infinity)
 #endif
+                                }
                             }
                         }
 
@@ -143,12 +149,12 @@ struct ContentView: View {
                     }
                 }
             }
-
+#endif
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(Color.secondary, lineWidth: 1)
             )
-#endif
+
     }
 
     var list: some View {
@@ -157,12 +163,10 @@ struct ContentView: View {
                 .listRowBackground(Color.clear)
         })
         .cornerRadius(16)
-#if os(iOS)
         .overlay(
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color.secondary, lineWidth: 1)
         )
-#endif
     }
 
     func textWithListView(proxy: GeometryProxy) -> some View {

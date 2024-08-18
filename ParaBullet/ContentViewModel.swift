@@ -21,24 +21,59 @@ class ContentViewModel: ObservableObject {
         var bulletPoints = [String]()
         var currentSentence = ""
         var counter = 1
-        for character in paragraph {
-            currentSentence.append(character)
 
+        let sentences = splitIntoSentences(paragraph)
+
+        for sentence in sentences {
             var bulletPointer = selectedBulletType
 
             if selectedBulletType == "Numbered List" {
                 bulletPointer = "\(counter)"
             }
 
-            if character == "." || character == "?" {
-                bulletPoints.append(bulletPointer + "    " + currentSentence.trimmingCharacters(in: .whitespacesAndNewlines) + extraSpace)
-                currentSentence = ""
-                counter += 1
-            }
+            bulletPoints.append(bulletPointer + "    " + sentence.trimmingCharacters(in: .whitespacesAndNewlines) + extraSpace)
+            counter += 1
         }
 
         return bulletPoints.filter { !$0.isEmpty }
+
+
     }
+
+    private func splitIntoSentences(_ text: String) -> [String] {
+        let pattern = "(?<=[.!?])\\s+(?=[A-Z])"
+
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: [])
+            let range = NSRange(location: 0, length: text.utf16.count)
+
+            var sentences: [String] = []
+            var lastIndex = text.startIndex
+
+            regex.enumerateMatches(in: text, options: [], range: range) { (match, flags, stop) in
+                if let matchRange = match?.range {
+                    let matchRange = Range(matchRange, in: text)!
+                    let sentence = String(text[lastIndex..<matchRange.lowerBound]).trimmingCharacters(in: .whitespacesAndNewlines)
+                    if !sentence.isEmpty {
+                        sentences.append(sentence)
+                    }
+                    lastIndex = matchRange.upperBound
+                }
+            }
+
+            // Add the last sentence
+            let lastSentence = String(text[lastIndex..<text.endIndex]).trimmingCharacters(in: .whitespacesAndNewlines)
+            if !lastSentence.isEmpty {
+                sentences.append(lastSentence)
+            }
+
+            return sentences
+        } catch {
+            // If regex fails, fallback to splitting by period
+            return text.components(separatedBy: ".").filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        }
+    }
+
 
     var extraSpace: String {
         return addExtraSpace ? "\n" : ""

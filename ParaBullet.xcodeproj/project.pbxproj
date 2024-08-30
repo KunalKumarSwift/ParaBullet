@@ -10,6 +10,9 @@
 		5F0C58C02AB0EC8200A2C9EE /* AdaptableStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C58BF2AB0EC8200A2C9EE /* AdaptableStack.swift */; };
 		5F0C58C22AB0F3D700A2C9EE /* AdaptableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C58C12AB0F3D700A2C9EE /* AdaptableScrollView.swift */; };
 		5F0C58C42AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C58C32AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift */; };
+		5F24EC102C81A18F0044B39B /* ParaBulletStatKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F24EC0F2C81A18F0044B39B /* ParaBulletStatKit */; };
+		5F24EC122C81A23A0044B39B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24EC112C81A23A0044B39B /* TabBarView.swift */; };
+		5F24EC182C81C3A50044B39B /* ReadabilityPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F24EC172C81C3A50044B39B /* ReadabilityPadding.swift */; };
 		5F67BEFC2AACE2BE000A094A /* ParaBulletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */; };
 		5F67BEFE2AACE2BE000A094A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BEFD2AACE2BE000A094A /* ContentView.swift */; };
 		5F67BF002AACE2BF000A094A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F67BEFF2AACE2BF000A094A /* Assets.xcassets */; };
@@ -56,6 +59,8 @@
 		5F0C58BF2AB0EC8200A2C9EE /* AdaptableStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableStack.swift; sourceTree = "<group>"; };
 		5F0C58C12AB0F3D700A2C9EE /* AdaptableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableScrollView.swift; sourceTree = "<group>"; };
 		5F0C58C32AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerStyleViewModifier.swift; sourceTree = "<group>"; };
+		5F24EC112C81A23A0044B39B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		5F24EC172C81C3A50044B39B /* ReadabilityPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadabilityPadding.swift; sourceTree = "<group>"; };
 		5F67BEF82AACE2BE000A094A /* ParaBullet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParaBullet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletApp.swift; sourceTree = "<group>"; };
 		5F67BEFD2AACE2BE000A094A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F24EC102C81A18F0044B39B /* ParaBulletStatKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +147,7 @@
 				5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */,
 				5F67BEFD2AACE2BE000A094A /* ContentView.swift */,
 				5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */,
+				5F24EC112C81A23A0044B39B /* TabBarView.swift */,
 				5F67BEFF2AACE2BF000A094A /* Assets.xcassets */,
 				5F67BF042AACE2BF000A094A /* ParaBullet.entitlements */,
 				5F67BF012AACE2BF000A094A /* Preview Content */,
@@ -179,6 +186,7 @@
 				5F67BF272AAD0F12000A094A /* TextGradient.swift */,
 				5F0C58C32AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift */,
 				5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */,
+				5F24EC172C81C3A50044B39B /* ReadabilityPadding.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -217,6 +225,9 @@
 			dependencies = (
 			);
 			name = ParaBullet;
+			packageProductDependencies = (
+				5F24EC0F2C81A18F0044B39B /* ParaBulletStatKit */,
+			);
 			productName = ParaBullet;
 			productReference = 5F67BEF82AACE2BE000A094A /* ParaBullet.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +246,8 @@
 				5F67BF0B2AACE2C0000A094A /* PBXTargetDependency */,
 			);
 			name = ParaBulletTests;
+			packageProductDependencies = (
+			);
 			productName = ParaBulletTests;
 			productReference = 5F67BF092AACE2C0000A094A /* ParaBulletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -289,6 +302,9 @@
 				Base,
 			);
 			mainGroup = 5F67BEEF2AACE2BE000A094A;
+			packageReferences = (
+				5F24EC0E2C81A18F0044B39B /* XCRemoteSwiftPackageReference "ParabulletStatKit" */,
+			);
 			productRefGroup = 5F67BEF92AACE2BE000A094A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,7 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F24EC182C81C3A50044B39B /* ReadabilityPadding.swift in Sources */,
 				5F6AF0CB2AB2483A00E424CD /* ContentViewModel.swift in Sources */,
+				5F24EC122C81A23A0044B39B /* TabBarView.swift in Sources */,
 				5F67BF282AAD0F12000A094A /* TextGradient.swift in Sources */,
 				5F0C58C22AB0F3D700A2C9EE /* AdaptableScrollView.swift in Sources */,
 				5F67BEFE2AACE2BE000A094A /* ContentView.swift in Sources */,
@@ -523,12 +541,12 @@
 				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphoneos*]" = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=macosx*]" = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ParaBullet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,12 +583,12 @@
 				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphoneos*]" = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=macosx*]" = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ParaBullet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -592,7 +610,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3AKEMCF7CZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kumar.Kunal.ParaBulletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -611,7 +629,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3AKEMCF7CZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kumar.Kunal.ParaBulletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -629,6 +647,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3AKEMCF7CZ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kumar.Kunal.ParaBulletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -646,6 +665,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3AKEMCF7CZ;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kumar.Kunal.ParaBulletUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -695,6 +715,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F24EC0E2C81A18F0044B39B /* XCRemoteSwiftPackageReference "ParabulletStatKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KunalKumarSwift/ParabulletStatKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F24EC0F2C81A18F0044B39B /* ParaBulletStatKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F24EC0E2C81A18F0044B39B /* XCRemoteSwiftPackageReference "ParabulletStatKit" */;
+			productName = ParaBulletStatKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F67BEF02AACE2BE000A094A /* Project object */;
 }

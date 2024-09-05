@@ -14,7 +14,7 @@ struct ParaBulletApp: App {
     @AppStorage("showMenuBarExtra") private var showMenuBarExtra = true
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
         }
         #if os(macOS)
         MenuBarExtra("ParaBullet", systemImage: "rectangle.and.pencil.and.ellipsis", isInserted: $showMenuBarExtra) {

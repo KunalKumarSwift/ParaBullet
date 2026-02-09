@@ -13,6 +13,8 @@ import UIKit
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
     @State private var presentSheet = false
+    @FocusState private var isTextEditorFocused: Bool   // 👈 keyboard focus
+    @State private var isKeyboardVisible = false
     let showShare: Bool
 
     init(showShare: Bool = true) {
@@ -22,7 +24,7 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             header
-            
+
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 24) {
                     sourceTextSection
@@ -34,33 +36,62 @@ struct ContentView: View {
                 .padding(.vertical, 32)
                 .padding(.bottom, 100)
             }
+            // 👇 dismiss keyboard when user scrolls
+            .scrollDismissesKeyboard(.interactively)
         }
         .overlay(
             VStack(spacing: 0.0) {
                 Spacer()
-                footer
+                if !isKeyboardVisible {
+                    footer
+                }
             }
         )
+        // 👇 tap anywhere outside to dismiss keyboard
+        .contentShape(Rectangle())
+        .onTapGesture {
+            isTextEditorFocused = false
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") {
+                    isTextEditorFocused = false
+                }
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
+            isKeyboardVisible = true
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
+            isKeyboardVisible = false
+        }
         .appPageStyle()
     }
 
+    // MARK: - Header
     private var header: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 Text("ParaBullet")
                     .font(.aptos(32, weight: .bold))
-                    .textGradient(colors: [.appPrimary, .appSecondary], startPoint: .leading, endPoint: .trailing)
-                
+                    .textGradient(
+                        colors: [.appPrimary, .appSecondary],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+
                 Text("Offline • Pro • No Ads")
                     .font(.aptos(10, weight: .bold))
                     .foregroundColor(.secondary.opacity(0.6))
                     .tracking(2)
             }
-            
+
             Spacer()
-            
+
             Button {
                 // Settings action
+                isTextEditorFocused = false
             } label: {
                 Image(systemName: "gearshape.fill")
                     .font(.system(size: 20))
@@ -76,66 +107,80 @@ struct ContentView: View {
         .padding(.bottom, 16)
     }
 
+    // MARK: - Source Text
     private var sourceTextSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
                 Text("Source Text")
                     .font(.aptos(14, weight: .semiBold))
                     .foregroundColor(.secondary)
+
                 Spacer()
+
                 Button("Clear") {
                     viewModel.inputParagraph = ""
                     viewModel.bulletPoints = []
+                    isTextEditorFocused = false
                 }
                 .font(.aptos(12, weight: .regular))
                 .foregroundColor(.appPrimary)
                 .buttonStyle(.plain)
             }
-            
+
             TextEditor(text: $viewModel.inputParagraph)
+                .focused($isTextEditorFocused)   // 👈 bind focus
                 .frame(height: 180)
                 .padding(12)
-                .scrollContentBackground(.hidden) // Remove default macOS background
+                .scrollContentBackground(.hidden)
                 .background(Color.surface.opacity(0.5))
                 .cornerRadius(20)
                 .appBorder()
         }
     }
 
+    // MARK: - Bullet Style
     private var bulletStyleSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Choose Bullet Style")
                 .font(.aptos(14, weight: .semiBold))
                 .foregroundColor(.secondary)
-            
+
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
                     BulletStyleButton(tag: "•", isSelected: viewModel.selectedBulletType == "•") {
                         viewModel.selectedBulletType = "•"
+                        isTextEditorFocused = false
                     }
                     BulletStyleButton(tag: "1.", isSelected: viewModel.selectedBulletType == "Numbered List") {
                         viewModel.selectedBulletType = "Numbered List"
+                        isTextEditorFocused = false
                     }
                     BulletStyleButton(tag: "⭐️", isSelected: viewModel.selectedBulletType == "⭐️") {
                         viewModel.selectedBulletType = "⭐️"
+                        isTextEditorFocused = false
                     }
                     BulletStyleButton(tag: "✅", isSelected: viewModel.selectedBulletType == "✅") {
                         viewModel.selectedBulletType = "✅"
+                        isTextEditorFocused = false
                     }
                     BulletStyleButton(tag: "➡️", isSelected: viewModel.selectedBulletType == "➡️") {
                         viewModel.selectedBulletType = "➡️"
+                        isTextEditorFocused = false
                     }
                 }
             }
         }
     }
 
+    // MARK: - Convert Button
     private var convertButtonSection: some View {
         VStack(spacing: 16) {
             ActionButton(title: "CONVERT NOW", icon: "bolt.fill") {
-                viewModel.bulletPoints = viewModel.paragraphToBulletPoints(viewModel.inputParagraph)
+                isTextEditorFocused = false
+                viewModel.bulletPoints =
+                    viewModel.paragraphToBulletPoints(viewModel.inputParagraph)
             }
-            
+
             Toggle(isOn: $viewModel.addExtraSpace) {
                 Text("Add spacing between items")
                     .font(.aptos(12))
@@ -145,13 +190,16 @@ struct ContentView: View {
         }
     }
 
+    // MARK: - Result
     private var resultSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
                 Text("Result")
                     .font(.aptos(14, weight: .semiBold))
                     .foregroundColor(.secondary)
+
                 Spacer()
+
                 Text("Auto-Generated")
                     .font(.aptos(10, weight: .bold))
                     .padding(.horizontal, 8)
@@ -160,7 +208,7 @@ struct ContentView: View {
                     .foregroundColor(.appPrimary)
                     .cornerRadius(4)
             }
-            
+
             VStack(alignment: .leading, spacing: 16) {
                 if viewModel.bulletPoints.isEmpty {
                     Text("Result will appear here...")
@@ -171,8 +219,13 @@ struct ContentView: View {
                 } else {
                     ForEach(viewModel.bulletPoints, id: \.self) { point in
                         HStack(alignment: .top, spacing: 12) {
-                            Text(viewModel.selectedBulletType == "Numbered List" ? "" : viewModel.selectedBulletType)
-                                .foregroundColor(.appPrimary)
+                            Text(
+                                viewModel.selectedBulletType == "Numbered List"
+                                ? ""
+                                : viewModel.selectedBulletType
+                            )
+                            .foregroundColor(.appPrimary)
+
                             Text(point)
                                 .font(.aptos(14))
                                 .fixedSize(horizontal: false, vertical: true)
@@ -188,20 +241,28 @@ struct ContentView: View {
         }
     }
 
+    // MARK: - Footer
     private var footer: some View {
         VStack(spacing: 0.0) {
             Divider()
-                .frame(height: 2)       // thickness of the divider
+                .frame(height: 2)
                 .background(Color.appPrimary)
+
             HStack(spacing: 12) {
-                ActionButton(title: "Copy All", icon: "doc.on.doc.fill", action: {
-                    viewModel.copyToClipboard()
-                }, isPrimary: false)
-                //.background(Color.primary.opacity(0.9)) // Dark in light mode, Light in dark mode? No, simplified
-                .colorInvert() // Simple way to match the 'stitch' design where button is dark
+                ActionButton(
+                    title: "Copy All",
+                    icon: "doc.on.doc.fill",
+                    action: {
+                        isTextEditorFocused = false
+                        viewModel.copyToClipboard()
+                    },
+                    isPrimary: false
+                )
+                .colorInvert()
 
                 if showShare {
                     Button {
+                        isTextEditorFocused = false
                         viewModel.shareList()
                     } label: {
                         Image(systemName: "square.and.arrow.up")

@@ -9,5 +9,12 @@
 		<key>UIColorName</key>
 		<string>LaunchColor</string>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Aptos.ttf</string>
+		<string>Aptos-Bold.ttf</string>
+		<string>Aptos-Light.ttf</string>
+		<string>Aptos-SemiBold.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F0C58C02AB0EC8200A2C9EE /* AdaptableStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C58BF2AB0EC8200A2C9EE /* AdaptableStack.swift */; };
-		5F0C58C22AB0F3D700A2C9EE /* AdaptableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C58C12AB0F3D700A2C9EE /* AdaptableScrollView.swift */; };
-		5F0C58C42AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C58C32AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift */; };
 		5F67BEFC2AACE2BE000A094A /* ParaBulletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */; };
 		5F67BEFE2AACE2BE000A094A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BEFD2AACE2BE000A094A /* ContentView.swift */; };
 		5F67BF002AACE2BF000A094A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F67BEFF2AACE2BF000A094A /* Assets.xcassets */; };
@@ -17,9 +14,103 @@
 		5F67BF0E2AACE2C0000A094A /* ParaBulletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF0D2AACE2C0000A094A /* ParaBulletTests.swift */; };
 		5F67BF182AACE2C0000A094A /* ParaBulletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF172AACE2C0000A094A /* ParaBulletUITests.swift */; };
 		5F67BF1A2AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */; };
-		5F67BF282AAD0F12000A094A /* TextGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF272AAD0F12000A094A /* TextGradient.swift */; };
-		5F6AF0C92AB2187400E424CD /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */; };
 		5F6AF0CB2AB2483A00E424CD /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */; };
+		5F929AB92F393206008A895C /* Aptos-ExtraBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA02F393206008A895C /* Aptos-ExtraBold-Italic.ttf */; };
+		5F929ABA2F393206008A895C /* Aptos-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A972F393206008A895C /* Aptos-Black.ttf */; };
+		5F929ABB2F393206008A895C /* Aptos-Mono-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA62F393206008A895C /* Aptos-Mono-Bold-Italic.ttf */; };
+		5F929ABC2F393206008A895C /* Aptos-Narrow-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAB2F393206008A895C /* Aptos-Narrow-Italic.ttf */; };
+		5F929ABD2F393206008A895C /* Aptos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A962F393206008A895C /* Aptos.ttf */; };
+		5F929ABE2F393206008A895C /* Aptos-Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAE2F393206008A895C /* Aptos-Serif.ttf */; };
+		5F929ABF2F393206008A895C /* Aptos-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A992F393206008A895C /* Aptos-Bold.ttf */; };
+		5F929AC02F393206008A895C /* Aptos-Serif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAF2F393206008A895C /* Aptos-Serif-Bold.ttf */; };
+		5F929AC12F393206008A895C /* Aptos-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA12F393206008A895C /* Aptos-Italic.ttf */; };
+		5F929AC22F393206008A895C /* Aptos-Mono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA52F393206008A895C /* Aptos-Mono-Bold.ttf */; };
+		5F929AC32F393206008A895C /* Aptos-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9C2F393206008A895C /* Aptos-Display-Bold.ttf */; };
+		5F929AC42F393206008A895C /* Aptos-Narrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA82F393206008A895C /* Aptos-Narrow.ttf */; };
+		5F929AC52F393206008A895C /* Aptos-Light-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA32F393206008A895C /* Aptos-Light-Italic.ttf */; };
+		5F929AC62F393206008A895C /* Aptos-Serif-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AB02F393206008A895C /* Aptos-Serif-Bold-Italic.ttf */; };
+		5F929AC72F393206008A895C /* Aptos-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAC2F393206008A895C /* Aptos-SemiBold.ttf */; };
+		5F929AC82F393206008A895C /* Aptos-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9A2F393206008A895C /* Aptos-Bold-Italic.ttf */; };
+		5F929AC92F393206008A895C /* Aptos-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA22F393206008A895C /* Aptos-Light.ttf */; };
+		5F929ACA2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAA2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf */; };
+		5F929ACB2F393206008A895C /* Aptos-Narrow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA92F393206008A895C /* Aptos-Narrow-Bold.ttf */; };
+		5F929ACC2F393206008A895C /* Aptos-Display.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9B2F393206008A895C /* Aptos-Display.ttf */; };
+		5F929ACD2F393206008A895C /* Aptos-Display-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9E2F393206008A895C /* Aptos-Display-Italic.ttf */; };
+		5F929ACE2F393206008A895C /* Aptos-Mono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA72F393206008A895C /* Aptos-Mono-Italic.ttf */; };
+		5F929ACF2F393206008A895C /* Aptos-SemiBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAD2F393206008A895C /* Aptos-SemiBold-Italic.ttf */; };
+		5F929AD02F393206008A895C /* Aptos-Serif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AB12F393206008A895C /* Aptos-Serif-Italic.ttf */; };
+		5F929AD12F393206008A895C /* Aptos-Display-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9D2F393206008A895C /* Aptos-Display-Bold-Italic.ttf */; };
+		5F929AD22F393206008A895C /* Aptos-Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA42F393206008A895C /* Aptos-Mono.ttf */; };
+		5F929AD32F393206008A895C /* Aptos-Black-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A982F393206008A895C /* Aptos-Black-Italic.ttf */; };
+		5F929AD42F393206008A895C /* Aptos-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9F2F393206008A895C /* Aptos-ExtraBold.ttf */; };
+		5F929ADC2F393206008A895C /* Font+Aptos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929AB22F393206008A895C /* Font+Aptos.swift */; };
+		5F929ADD2F393206008A895C /* Aptos-ExtraBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA02F393206008A895C /* Aptos-ExtraBold-Italic.ttf */; };
+		5F929ADE2F393206008A895C /* Aptos-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A972F393206008A895C /* Aptos-Black.ttf */; };
+		5F929ADF2F393206008A895C /* Aptos-Mono-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA62F393206008A895C /* Aptos-Mono-Bold-Italic.ttf */; };
+		5F929AE02F393206008A895C /* Aptos-Narrow-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAB2F393206008A895C /* Aptos-Narrow-Italic.ttf */; };
+		5F929AE12F393206008A895C /* Aptos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A962F393206008A895C /* Aptos.ttf */; };
+		5F929AE22F393206008A895C /* Aptos-Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAE2F393206008A895C /* Aptos-Serif.ttf */; };
+		5F929AE32F393206008A895C /* Aptos-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A992F393206008A895C /* Aptos-Bold.ttf */; };
+		5F929AE42F393206008A895C /* Aptos-Serif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAF2F393206008A895C /* Aptos-Serif-Bold.ttf */; };
+		5F929AE52F393206008A895C /* Aptos-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA12F393206008A895C /* Aptos-Italic.ttf */; };
+		5F929AE62F393206008A895C /* Aptos-Mono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA52F393206008A895C /* Aptos-Mono-Bold.ttf */; };
+		5F929AE72F393206008A895C /* Aptos-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9C2F393206008A895C /* Aptos-Display-Bold.ttf */; };
+		5F929AE82F393206008A895C /* Aptos-Narrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA82F393206008A895C /* Aptos-Narrow.ttf */; };
+		5F929AE92F393206008A895C /* Aptos-Light-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA32F393206008A895C /* Aptos-Light-Italic.ttf */; };
+		5F929AEA2F393206008A895C /* Aptos-Serif-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AB02F393206008A895C /* Aptos-Serif-Bold-Italic.ttf */; };
+		5F929AEB2F393206008A895C /* Aptos-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAC2F393206008A895C /* Aptos-SemiBold.ttf */; };
+		5F929AEC2F393206008A895C /* Aptos-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9A2F393206008A895C /* Aptos-Bold-Italic.ttf */; };
+		5F929AED2F393206008A895C /* Aptos-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA22F393206008A895C /* Aptos-Light.ttf */; };
+		5F929AEE2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAA2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf */; };
+		5F929AEF2F393206008A895C /* Aptos-Narrow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA92F393206008A895C /* Aptos-Narrow-Bold.ttf */; };
+		5F929AF02F393206008A895C /* Aptos-Display.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9B2F393206008A895C /* Aptos-Display.ttf */; };
+		5F929AF12F393206008A895C /* Aptos-Display-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9E2F393206008A895C /* Aptos-Display-Italic.ttf */; };
+		5F929AF22F393206008A895C /* Aptos-Mono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA72F393206008A895C /* Aptos-Mono-Italic.ttf */; };
+		5F929AF32F393206008A895C /* Aptos-SemiBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAD2F393206008A895C /* Aptos-SemiBold-Italic.ttf */; };
+		5F929AF42F393206008A895C /* Aptos-Serif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AB12F393206008A895C /* Aptos-Serif-Italic.ttf */; };
+		5F929AF52F393206008A895C /* Aptos-Display-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9D2F393206008A895C /* Aptos-Display-Bold-Italic.ttf */; };
+		5F929AF62F393206008A895C /* Aptos-Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA42F393206008A895C /* Aptos-Mono.ttf */; };
+		5F929AF72F393206008A895C /* Aptos-Black-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A982F393206008A895C /* Aptos-Black-Italic.ttf */; };
+		5F929AF82F393206008A895C /* Aptos-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9F2F393206008A895C /* Aptos-ExtraBold.ttf */; };
+		5F929AF92F393206008A895C /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929AB42F393206008A895C /* HideKeyboard.swift */; };
+		5F929AFA2F393206008A895C /* PickerStyleViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929AB52F393206008A895C /* PickerStyleViewModifier.swift */; };
+		5F929AFB2F393206008A895C /* AdaptableStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929A932F393206008A895C /* AdaptableStack.swift */; };
+		5F929AFC2F393206008A895C /* AdaptableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929A922F393206008A895C /* AdaptableScrollView.swift */; };
+		5F929AFD2F393206008A895C /* TextGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929AB62F393206008A895C /* TextGradient.swift */; };
+		5F929AFE2F393206008A895C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929A902F393206008A895C /* AppColors.swift */; };
+		5F929AFF2F393206008A895C /* AppButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929A942F393206008A895C /* AppButtons.swift */; };
+		5F929B002F393206008A895C /* Font+Aptos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929AB22F393206008A895C /* Font+Aptos.swift */; };
+		5F929B082F393206008A895C /* Font+Aptos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929AB22F393206008A895C /* Font+Aptos.swift */; };
+		5F929B092F393206008A895C /* Aptos-ExtraBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA02F393206008A895C /* Aptos-ExtraBold-Italic.ttf */; };
+		5F929B0A2F393206008A895C /* Aptos-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A972F393206008A895C /* Aptos-Black.ttf */; };
+		5F929B0B2F393206008A895C /* Aptos-Mono-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA62F393206008A895C /* Aptos-Mono-Bold-Italic.ttf */; };
+		5F929B0C2F393206008A895C /* Aptos-Narrow-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAB2F393206008A895C /* Aptos-Narrow-Italic.ttf */; };
+		5F929B0D2F393206008A895C /* Aptos.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A962F393206008A895C /* Aptos.ttf */; };
+		5F929B0E2F393206008A895C /* Aptos-Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAE2F393206008A895C /* Aptos-Serif.ttf */; };
+		5F929B0F2F393206008A895C /* Aptos-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A992F393206008A895C /* Aptos-Bold.ttf */; };
+		5F929B102F393206008A895C /* Aptos-Serif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAF2F393206008A895C /* Aptos-Serif-Bold.ttf */; };
+		5F929B112F393206008A895C /* Aptos-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA12F393206008A895C /* Aptos-Italic.ttf */; };
+		5F929B122F393206008A895C /* Aptos-Mono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA52F393206008A895C /* Aptos-Mono-Bold.ttf */; };
+		5F929B132F393206008A895C /* Aptos-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9C2F393206008A895C /* Aptos-Display-Bold.ttf */; };
+		5F929B142F393206008A895C /* Aptos-Narrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA82F393206008A895C /* Aptos-Narrow.ttf */; };
+		5F929B152F393206008A895C /* Aptos-Light-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA32F393206008A895C /* Aptos-Light-Italic.ttf */; };
+		5F929B162F393206008A895C /* Aptos-Serif-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AB02F393206008A895C /* Aptos-Serif-Bold-Italic.ttf */; };
+		5F929B172F393206008A895C /* Aptos-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAC2F393206008A895C /* Aptos-SemiBold.ttf */; };
+		5F929B182F393206008A895C /* Aptos-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9A2F393206008A895C /* Aptos-Bold-Italic.ttf */; };
+		5F929B192F393206008A895C /* Aptos-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA22F393206008A895C /* Aptos-Light.ttf */; };
+		5F929B1A2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAA2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf */; };
+		5F929B1B2F393206008A895C /* Aptos-Narrow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA92F393206008A895C /* Aptos-Narrow-Bold.ttf */; };
+		5F929B1C2F393206008A895C /* Aptos-Display.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9B2F393206008A895C /* Aptos-Display.ttf */; };
+		5F929B1D2F393206008A895C /* Aptos-Display-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9E2F393206008A895C /* Aptos-Display-Italic.ttf */; };
+		5F929B1E2F393206008A895C /* Aptos-Mono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA72F393206008A895C /* Aptos-Mono-Italic.ttf */; };
+		5F929B1F2F393206008A895C /* Aptos-SemiBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AAD2F393206008A895C /* Aptos-SemiBold-Italic.ttf */; };
+		5F929B202F393206008A895C /* Aptos-Serif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AB12F393206008A895C /* Aptos-Serif-Italic.ttf */; };
+		5F929B212F393206008A895C /* Aptos-Display-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9D2F393206008A895C /* Aptos-Display-Bold-Italic.ttf */; };
+		5F929B222F393206008A895C /* Aptos-Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA42F393206008A895C /* Aptos-Mono.ttf */; };
+		5F929B232F393206008A895C /* Aptos-Black-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A982F393206008A895C /* Aptos-Black-Italic.ttf */; };
+		5F929B242F393206008A895C /* Aptos-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A9F2F393206008A895C /* Aptos-ExtraBold.ttf */; };
+		5F929B262F393CB8008A895C /* AppPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929B252F393CB7008A895C /* AppPageStyle.swift */; };
+		5F929B282F3A64C6008A895C /* AppBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F929B272F3A64C6008A895C /* AppBorderStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +144,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5F0C58BF2AB0EC8200A2C9EE /* AdaptableStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableStack.swift; sourceTree = "<group>"; };
-		5F0C58C12AB0F3D700A2C9EE /* AdaptableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableScrollView.swift; sourceTree = "<group>"; };
-		5F0C58C32AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerStyleViewModifier.swift; sourceTree = "<group>"; };
 		5F67BEF82AACE2BE000A094A /* ParaBullet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParaBullet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletApp.swift; sourceTree = "<group>"; };
 		5F67BEFD2AACE2BE000A094A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,9 +155,45 @@
 		5F67BF132AACE2C0000A094A /* ParaBulletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParaBulletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F67BF172AACE2C0000A094A /* ParaBulletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITests.swift; sourceTree = "<group>"; };
 		5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5F67BF272AAD0F12000A094A /* TextGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGradient.swift; sourceTree = "<group>"; };
-		5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		5F929A902F393206008A895C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		5F929A922F393206008A895C /* AdaptableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableScrollView.swift; sourceTree = "<group>"; };
+		5F929A932F393206008A895C /* AdaptableStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableStack.swift; sourceTree = "<group>"; };
+		5F929A942F393206008A895C /* AppButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButtons.swift; sourceTree = "<group>"; };
+		5F929A962F393206008A895C /* Aptos.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aptos.ttf; sourceTree = "<group>"; };
+		5F929A972F393206008A895C /* Aptos-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Black.ttf"; sourceTree = "<group>"; };
+		5F929A982F393206008A895C /* Aptos-Black-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Black-Italic.ttf"; sourceTree = "<group>"; };
+		5F929A992F393206008A895C /* Aptos-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Bold.ttf"; sourceTree = "<group>"; };
+		5F929A9A2F393206008A895C /* Aptos-Bold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Bold-Italic.ttf"; sourceTree = "<group>"; };
+		5F929A9B2F393206008A895C /* Aptos-Display.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Display.ttf"; sourceTree = "<group>"; };
+		5F929A9C2F393206008A895C /* Aptos-Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Display-Bold.ttf"; sourceTree = "<group>"; };
+		5F929A9D2F393206008A895C /* Aptos-Display-Bold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Display-Bold-Italic.ttf"; sourceTree = "<group>"; };
+		5F929A9E2F393206008A895C /* Aptos-Display-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Display-Italic.ttf"; sourceTree = "<group>"; };
+		5F929A9F2F393206008A895C /* Aptos-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5F929AA02F393206008A895C /* Aptos-ExtraBold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-ExtraBold-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AA12F393206008A895C /* Aptos-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AA22F393206008A895C /* Aptos-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Light.ttf"; sourceTree = "<group>"; };
+		5F929AA32F393206008A895C /* Aptos-Light-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Light-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AA42F393206008A895C /* Aptos-Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Mono.ttf"; sourceTree = "<group>"; };
+		5F929AA52F393206008A895C /* Aptos-Mono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Mono-Bold.ttf"; sourceTree = "<group>"; };
+		5F929AA62F393206008A895C /* Aptos-Mono-Bold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Mono-Bold-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AA72F393206008A895C /* Aptos-Mono-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Mono-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AA82F393206008A895C /* Aptos-Narrow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Narrow.ttf"; sourceTree = "<group>"; };
+		5F929AA92F393206008A895C /* Aptos-Narrow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Narrow-Bold.ttf"; sourceTree = "<group>"; };
+		5F929AAA2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Narrow-Bold-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AAB2F393206008A895C /* Aptos-Narrow-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Narrow-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AAC2F393206008A895C /* Aptos-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-SemiBold.ttf"; sourceTree = "<group>"; };
+		5F929AAD2F393206008A895C /* Aptos-SemiBold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-SemiBold-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AAE2F393206008A895C /* Aptos-Serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Serif.ttf"; sourceTree = "<group>"; };
+		5F929AAF2F393206008A895C /* Aptos-Serif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Serif-Bold.ttf"; sourceTree = "<group>"; };
+		5F929AB02F393206008A895C /* Aptos-Serif-Bold-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Serif-Bold-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AB12F393206008A895C /* Aptos-Serif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aptos-Serif-Italic.ttf"; sourceTree = "<group>"; };
+		5F929AB22F393206008A895C /* Font+Aptos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Aptos.swift"; sourceTree = "<group>"; };
+		5F929AB42F393206008A895C /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+		5F929AB52F393206008A895C /* PickerStyleViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerStyleViewModifier.swift; sourceTree = "<group>"; };
+		5F929AB62F393206008A895C /* TextGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGradient.swift; sourceTree = "<group>"; };
+		5F929B252F393CB7008A895C /* AppPageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPageStyle.swift; sourceTree = "<group>"; };
+		5F929B272F3A64C6008A895C /* AppBorderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBorderStyle.swift; sourceTree = "<group>"; };
 		5FB36E182ABFF11A00D8A032 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		5FB36E1A2ABFF11A00D8A032 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		5FD1B1082AAF80DC00664D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -101,15 +225,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F0C58BE2AB0EC7200A2C9EE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5F0C58BF2AB0EC8200A2C9EE /* AdaptableStack.swift */,
-				5F0C58C12AB0F3D700A2C9EE /* AdaptableScrollView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		5F67BEEF2AACE2BE000A094A = {
 			isa = PBXGroup;
 			children = (
@@ -134,10 +249,9 @@
 		5F67BEFA2AACE2BE000A094A /* ParaBullet */ = {
 			isa = PBXGroup;
 			children = (
-				5F0C58BE2AB0EC7200A2C9EE /* Views */,
+				5F929AB82F393206008A895C /* DesignSystem */,
 				5FFF789E2AAFB662000D8D0D /* Documents */,
 				5FD1B1082AAF80DC00664D34 /* Info.plist */,
-				5F67BF262AAD0EF2000A094A /* ViewModifier */,
 				5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */,
 				5F67BEFD2AACE2BE000A094A /* ContentView.swift */,
 				5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */,
@@ -173,14 +287,81 @@
 			path = ParaBulletUITests;
 			sourceTree = "<group>";
 		};
-		5F67BF262AAD0EF2000A094A /* ViewModifier */ = {
+		5F929A912F393206008A895C /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				5F67BF272AAD0F12000A094A /* TextGradient.swift */,
-				5F0C58C32AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift */,
-				5F6AF0C82AB2187400E424CD /* HideKeyboard.swift */,
+				5F929A902F393206008A895C /* AppColors.swift */,
 			);
-			path = ViewModifier;
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		5F929A952F393206008A895C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5F929A922F393206008A895C /* AdaptableScrollView.swift */,
+				5F929A932F393206008A895C /* AdaptableStack.swift */,
+				5F929A942F393206008A895C /* AppButtons.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5F929AB32F393206008A895C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5F929A962F393206008A895C /* Aptos.ttf */,
+				5F929A972F393206008A895C /* Aptos-Black.ttf */,
+				5F929A982F393206008A895C /* Aptos-Black-Italic.ttf */,
+				5F929A992F393206008A895C /* Aptos-Bold.ttf */,
+				5F929A9A2F393206008A895C /* Aptos-Bold-Italic.ttf */,
+				5F929A9B2F393206008A895C /* Aptos-Display.ttf */,
+				5F929A9C2F393206008A895C /* Aptos-Display-Bold.ttf */,
+				5F929A9D2F393206008A895C /* Aptos-Display-Bold-Italic.ttf */,
+				5F929A9E2F393206008A895C /* Aptos-Display-Italic.ttf */,
+				5F929A9F2F393206008A895C /* Aptos-ExtraBold.ttf */,
+				5F929AA02F393206008A895C /* Aptos-ExtraBold-Italic.ttf */,
+				5F929AA12F393206008A895C /* Aptos-Italic.ttf */,
+				5F929AA22F393206008A895C /* Aptos-Light.ttf */,
+				5F929AA32F393206008A895C /* Aptos-Light-Italic.ttf */,
+				5F929AA42F393206008A895C /* Aptos-Mono.ttf */,
+				5F929AA52F393206008A895C /* Aptos-Mono-Bold.ttf */,
+				5F929AA62F393206008A895C /* Aptos-Mono-Bold-Italic.ttf */,
+				5F929AA72F393206008A895C /* Aptos-Mono-Italic.ttf */,
+				5F929AA82F393206008A895C /* Aptos-Narrow.ttf */,
+				5F929AA92F393206008A895C /* Aptos-Narrow-Bold.ttf */,
+				5F929AAA2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf */,
+				5F929AAB2F393206008A895C /* Aptos-Narrow-Italic.ttf */,
+				5F929AAC2F393206008A895C /* Aptos-SemiBold.ttf */,
+				5F929AAD2F393206008A895C /* Aptos-SemiBold-Italic.ttf */,
+				5F929AAE2F393206008A895C /* Aptos-Serif.ttf */,
+				5F929AAF2F393206008A895C /* Aptos-Serif-Bold.ttf */,
+				5F929AB02F393206008A895C /* Aptos-Serif-Bold-Italic.ttf */,
+				5F929AB12F393206008A895C /* Aptos-Serif-Italic.ttf */,
+				5F929AB22F393206008A895C /* Font+Aptos.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5F929AB72F393206008A895C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				5F929B272F3A64C6008A895C /* AppBorderStyle.swift */,
+				5F929B252F393CB7008A895C /* AppPageStyle.swift */,
+				5F929AB42F393206008A895C /* HideKeyboard.swift */,
+				5F929AB52F393206008A895C /* PickerStyleViewModifier.swift */,
+				5F929AB62F393206008A895C /* TextGradient.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		5F929AB82F393206008A895C /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				5F929A912F393206008A895C /* Colors */,
+				5F929A952F393206008A895C /* Components */,
+				5F929AB32F393206008A895C /* Fonts */,
+				5F929AB72F393206008A895C /* Styles */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		5FB36E172ABFF11A00D8A032 /* Frameworks */ = {
@@ -306,6 +487,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F67BF032AACE2BF000A094A /* Preview Assets.xcassets in Resources */,
+				5F929ADD2F393206008A895C /* Aptos-ExtraBold-Italic.ttf in Resources */,
+				5F929ADE2F393206008A895C /* Aptos-Black.ttf in Resources */,
+				5F929ADF2F393206008A895C /* Aptos-Mono-Bold-Italic.ttf in Resources */,
+				5F929AE02F393206008A895C /* Aptos-Narrow-Italic.ttf in Resources */,
+				5F929AE12F393206008A895C /* Aptos.ttf in Resources */,
+				5F929AE22F393206008A895C /* Aptos-Serif.ttf in Resources */,
+				5F929AE32F393206008A895C /* Aptos-Bold.ttf in Resources */,
+				5F929AE42F393206008A895C /* Aptos-Serif-Bold.ttf in Resources */,
+				5F929AE52F393206008A895C /* Aptos-Italic.ttf in Resources */,
+				5F929AE62F393206008A895C /* Aptos-Mono-Bold.ttf in Resources */,
+				5F929AE72F393206008A895C /* Aptos-Display-Bold.ttf in Resources */,
+				5F929AE82F393206008A895C /* Aptos-Narrow.ttf in Resources */,
+				5F929AE92F393206008A895C /* Aptos-Light-Italic.ttf in Resources */,
+				5F929AEA2F393206008A895C /* Aptos-Serif-Bold-Italic.ttf in Resources */,
+				5F929AEB2F393206008A895C /* Aptos-SemiBold.ttf in Resources */,
+				5F929AEC2F393206008A895C /* Aptos-Bold-Italic.ttf in Resources */,
+				5F929AED2F393206008A895C /* Aptos-Light.ttf in Resources */,
+				5F929AEE2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf in Resources */,
+				5F929AEF2F393206008A895C /* Aptos-Narrow-Bold.ttf in Resources */,
+				5F929AF02F393206008A895C /* Aptos-Display.ttf in Resources */,
+				5F929AF12F393206008A895C /* Aptos-Display-Italic.ttf in Resources */,
+				5F929AF22F393206008A895C /* Aptos-Mono-Italic.ttf in Resources */,
+				5F929AF32F393206008A895C /* Aptos-SemiBold-Italic.ttf in Resources */,
+				5F929AF42F393206008A895C /* Aptos-Serif-Italic.ttf in Resources */,
+				5F929AF52F393206008A895C /* Aptos-Display-Bold-Italic.ttf in Resources */,
+				5F929AF62F393206008A895C /* Aptos-Mono.ttf in Resources */,
+				5F929AF72F393206008A895C /* Aptos-Black-Italic.ttf in Resources */,
+				5F929AF82F393206008A895C /* Aptos-ExtraBold.ttf in Resources */,
 				5F67BF002AACE2BF000A094A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +523,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F929B092F393206008A895C /* Aptos-ExtraBold-Italic.ttf in Resources */,
+				5F929B0A2F393206008A895C /* Aptos-Black.ttf in Resources */,
+				5F929B0B2F393206008A895C /* Aptos-Mono-Bold-Italic.ttf in Resources */,
+				5F929B0C2F393206008A895C /* Aptos-Narrow-Italic.ttf in Resources */,
+				5F929B0D2F393206008A895C /* Aptos.ttf in Resources */,
+				5F929B0E2F393206008A895C /* Aptos-Serif.ttf in Resources */,
+				5F929B0F2F393206008A895C /* Aptos-Bold.ttf in Resources */,
+				5F929B102F393206008A895C /* Aptos-Serif-Bold.ttf in Resources */,
+				5F929B112F393206008A895C /* Aptos-Italic.ttf in Resources */,
+				5F929B122F393206008A895C /* Aptos-Mono-Bold.ttf in Resources */,
+				5F929B132F393206008A895C /* Aptos-Display-Bold.ttf in Resources */,
+				5F929B142F393206008A895C /* Aptos-Narrow.ttf in Resources */,
+				5F929B152F393206008A895C /* Aptos-Light-Italic.ttf in Resources */,
+				5F929B162F393206008A895C /* Aptos-Serif-Bold-Italic.ttf in Resources */,
+				5F929B172F393206008A895C /* Aptos-SemiBold.ttf in Resources */,
+				5F929B182F393206008A895C /* Aptos-Bold-Italic.ttf in Resources */,
+				5F929B192F393206008A895C /* Aptos-Light.ttf in Resources */,
+				5F929B1A2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf in Resources */,
+				5F929B1B2F393206008A895C /* Aptos-Narrow-Bold.ttf in Resources */,
+				5F929B1C2F393206008A895C /* Aptos-Display.ttf in Resources */,
+				5F929B1D2F393206008A895C /* Aptos-Display-Italic.ttf in Resources */,
+				5F929B1E2F393206008A895C /* Aptos-Mono-Italic.ttf in Resources */,
+				5F929B1F2F393206008A895C /* Aptos-SemiBold-Italic.ttf in Resources */,
+				5F929B202F393206008A895C /* Aptos-Serif-Italic.ttf in Resources */,
+				5F929B212F393206008A895C /* Aptos-Display-Bold-Italic.ttf in Resources */,
+				5F929B222F393206008A895C /* Aptos-Mono.ttf in Resources */,
+				5F929B232F393206008A895C /* Aptos-Black-Italic.ttf in Resources */,
+				5F929B242F393206008A895C /* Aptos-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +558,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F929AB92F393206008A895C /* Aptos-ExtraBold-Italic.ttf in Resources */,
+				5F929ABA2F393206008A895C /* Aptos-Black.ttf in Resources */,
+				5F929ABB2F393206008A895C /* Aptos-Mono-Bold-Italic.ttf in Resources */,
+				5F929ABC2F393206008A895C /* Aptos-Narrow-Italic.ttf in Resources */,
+				5F929ABD2F393206008A895C /* Aptos.ttf in Resources */,
+				5F929ABE2F393206008A895C /* Aptos-Serif.ttf in Resources */,
+				5F929ABF2F393206008A895C /* Aptos-Bold.ttf in Resources */,
+				5F929AC02F393206008A895C /* Aptos-Serif-Bold.ttf in Resources */,
+				5F929AC12F393206008A895C /* Aptos-Italic.ttf in Resources */,
+				5F929AC22F393206008A895C /* Aptos-Mono-Bold.ttf in Resources */,
+				5F929AC32F393206008A895C /* Aptos-Display-Bold.ttf in Resources */,
+				5F929AC42F393206008A895C /* Aptos-Narrow.ttf in Resources */,
+				5F929AC52F393206008A895C /* Aptos-Light-Italic.ttf in Resources */,
+				5F929AC62F393206008A895C /* Aptos-Serif-Bold-Italic.ttf in Resources */,
+				5F929AC72F393206008A895C /* Aptos-SemiBold.ttf in Resources */,
+				5F929AC82F393206008A895C /* Aptos-Bold-Italic.ttf in Resources */,
+				5F929AC92F393206008A895C /* Aptos-Light.ttf in Resources */,
+				5F929ACA2F393206008A895C /* Aptos-Narrow-Bold-Italic.ttf in Resources */,
+				5F929ACB2F393206008A895C /* Aptos-Narrow-Bold.ttf in Resources */,
+				5F929ACC2F393206008A895C /* Aptos-Display.ttf in Resources */,
+				5F929ACD2F393206008A895C /* Aptos-Display-Italic.ttf in Resources */,
+				5F929ACE2F393206008A895C /* Aptos-Mono-Italic.ttf in Resources */,
+				5F929ACF2F393206008A895C /* Aptos-SemiBold-Italic.ttf in Resources */,
+				5F929AD02F393206008A895C /* Aptos-Serif-Italic.ttf in Resources */,
+				5F929AD12F393206008A895C /* Aptos-Display-Bold-Italic.ttf in Resources */,
+				5F929AD22F393206008A895C /* Aptos-Mono.ttf in Resources */,
+				5F929AD32F393206008A895C /* Aptos-Black-Italic.ttf in Resources */,
+				5F929AD42F393206008A895C /* Aptos-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,14 +596,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F929B262F393CB8008A895C /* AppPageStyle.swift in Sources */,
+				5F929AF92F393206008A895C /* HideKeyboard.swift in Sources */,
+				5F929AFA2F393206008A895C /* PickerStyleViewModifier.swift in Sources */,
+				5F929AFB2F393206008A895C /* AdaptableStack.swift in Sources */,
+				5F929AFC2F393206008A895C /* AdaptableScrollView.swift in Sources */,
+				5F929AFD2F393206008A895C /* TextGradient.swift in Sources */,
+				5F929AFE2F393206008A895C /* AppColors.swift in Sources */,
+				5F929AFF2F393206008A895C /* AppButtons.swift in Sources */,
+				5F929B002F393206008A895C /* Font+Aptos.swift in Sources */,
 				5F6AF0CB2AB2483A00E424CD /* ContentViewModel.swift in Sources */,
-				5F67BF282AAD0F12000A094A /* TextGradient.swift in Sources */,
-				5F0C58C22AB0F3D700A2C9EE /* AdaptableScrollView.swift in Sources */,
 				5F67BEFE2AACE2BE000A094A /* ContentView.swift in Sources */,
-				5F6AF0C92AB2187400E424CD /* HideKeyboard.swift in Sources */,
 				5F67BEFC2AACE2BE000A094A /* ParaBulletApp.swift in Sources */,
-				5F0C58C02AB0EC8200A2C9EE /* AdaptableStack.swift in Sources */,
-				5F0C58C42AB0FE9D00A2C9EE /* PickerStyleViewModifier.swift in Sources */,
+				5F929B282F3A64C6008A895C /* AppBorderStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F929B082F393206008A895C /* Font+Aptos.swift in Sources */,
 				5F67BF0E2AACE2C0000A094A /* ParaBulletTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F929ADC2F393206008A895C /* Font+Aptos.swift in Sources */,
 				5F67BF1A2AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift in Sources */,
 				5F67BF182AACE2C0000A094A /* ParaBulletUITests.swift in Sources */,
 			);
@@ -523,12 +795,12 @@
 				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphoneos*]" = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=macosx*]" = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ParaBullet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,12 +837,12 @@
 				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=iphoneos*]" = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=macosx*]" = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ParaBullet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";

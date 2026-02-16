@@ -15,6 +15,9 @@
 		5F67BF182AACE2C0000A094A /* ParaBulletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF172AACE2C0000A094A /* ParaBulletUITests.swift */; };
 		5F67BF1A2AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */; };
 		5F6AF0CB2AB2483A00E424CD /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */; };
+		5F6FAF7F2F4268DA002F66D8 /* SummarizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6FAF7D2F4268DA002F66D8 /* SummarizationView.swift */; };
+		5F6FAF802F4268DA002F66D8 /* SummarizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6FAF7E2F4268DA002F66D8 /* SummarizationViewModel.swift */; };
+		5F6FAF812F4268DA002F66D8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6FAF7C2F4268DA002F66D8 /* MainTabView.swift */; };
 		5F929AB92F393206008A895C /* Aptos-ExtraBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA02F393206008A895C /* Aptos-ExtraBold-Italic.ttf */; };
 		5F929ABA2F393206008A895C /* Aptos-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A972F393206008A895C /* Aptos-Black.ttf */; };
 		5F929ABB2F393206008A895C /* Aptos-Mono-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA62F393206008A895C /* Aptos-Mono-Bold-Italic.ttf */; };
@@ -156,6 +159,9 @@
 		5F67BF172AACE2C0000A094A /* ParaBulletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITests.swift; sourceTree = "<group>"; };
 		5F67BF192AACE2C0000A094A /* ParaBulletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParaBulletUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		5F6FAF7C2F4268DA002F66D8 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		5F6FAF7D2F4268DA002F66D8 /* SummarizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarizationView.swift; sourceTree = "<group>"; };
+		5F6FAF7E2F4268DA002F66D8 /* SummarizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarizationViewModel.swift; sourceTree = "<group>"; };
 		5F929A902F393206008A895C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		5F929A922F393206008A895C /* AdaptableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableScrollView.swift; sourceTree = "<group>"; };
 		5F929A932F393206008A895C /* AdaptableStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableStack.swift; sourceTree = "<group>"; };
@@ -253,6 +259,9 @@
 				5FFF789E2AAFB662000D8D0D /* Documents */,
 				5FD1B1082AAF80DC00664D34 /* Info.plist */,
 				5F67BEFB2AACE2BE000A094A /* ParaBulletApp.swift */,
+				5F6FAF7C2F4268DA002F66D8 /* MainTabView.swift */,
+				5F6FAF7D2F4268DA002F66D8 /* SummarizationView.swift */,
+				5F6FAF7E2F4268DA002F66D8 /* SummarizationViewModel.swift */,
 				5F67BEFD2AACE2BE000A094A /* ContentView.swift */,
 				5F6AF0CA2AB2483A00E424CD /* ContentViewModel.swift */,
 				5F67BEFF2AACE2BF000A094A /* Assets.xcassets */,
@@ -603,6 +612,9 @@
 				5F929AFC2F393206008A895C /* AdaptableScrollView.swift in Sources */,
 				5F929AFD2F393206008A895C /* TextGradient.swift in Sources */,
 				5F929AFE2F393206008A895C /* AppColors.swift in Sources */,
+				5F6FAF7F2F4268DA002F66D8 /* SummarizationView.swift in Sources */,
+				5F6FAF802F4268DA002F66D8 /* SummarizationViewModel.swift in Sources */,
+				5F6FAF812F4268DA002F66D8 /* MainTabView.swift in Sources */,
 				5F929AFF2F393206008A895C /* AppButtons.swift in Sources */,
 				5F929B002F393206008A895C /* Font+Aptos.swift in Sources */,
 				5F6AF0CB2AB2483A00E424CD /* ContentViewModel.swift in Sources */,

@@ -18,15 +18,26 @@ struct SummarizationView: View {
             header
             
             ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 24) {
-                    sourceTextSection
-                    tokenGuardrailSection
-                    convertButtonSection
-                    resultSection
+                ScrollViewReader { proxy in
+                    VStack(alignment: .leading, spacing: 24) {
+                        sourceTextSection
+                        tokenGuardrailSection
+                        convertButtonSection
+                        resultSection
+                        
+                        // Explicit clearance for the floating footer
+                        Spacer()
+                            .frame(height: 160)
+                            .id("bottomAnchor")
+                    }
+                    .padding(.horizontal, 24)
+                    .padding(.top, 32)
+                    .onChange(of: viewModel.summary) { _ in
+                        if viewModel.isSummarizing {
+                            proxy.scrollTo("bottomAnchor", anchor: .bottom)
+                        }
+                    }
                 }
-                .padding(.horizontal, 24)
-                .padding(.vertical, 32)
-                .padding(.bottom, 100)
             }
             .scrollDismissesKeyboard(.interactively)
         }

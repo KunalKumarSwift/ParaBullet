@@ -18,6 +18,8 @@
 		5F6FAF7F2F4268DA002F66D8 /* SummarizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6FAF7D2F4268DA002F66D8 /* SummarizationView.swift */; };
 		5F6FAF802F4268DA002F66D8 /* SummarizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6FAF7E2F4268DA002F66D8 /* SummarizationViewModel.swift */; };
 		5F6FAF812F4268DA002F66D8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6FAF7C2F4268DA002F66D8 /* MainTabView.swift */; };
+		5F6FAF842F42B185002F66D8 /* GlassmorphismStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6FAF832F42B185002F66D8 /* GlassmorphismStyle.swift */; };
+		5F6FAF852F42B185002F66D8 /* AIGlowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6FAF822F42B185002F66D8 /* AIGlowModifier.swift */; };
 		5F929AB92F393206008A895C /* Aptos-ExtraBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA02F393206008A895C /* Aptos-ExtraBold-Italic.ttf */; };
 		5F929ABA2F393206008A895C /* Aptos-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929A972F393206008A895C /* Aptos-Black.ttf */; };
 		5F929ABB2F393206008A895C /* Aptos-Mono-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F929AA62F393206008A895C /* Aptos-Mono-Bold-Italic.ttf */; };
@@ -162,6 +164,8 @@
 		5F6FAF7C2F4268DA002F66D8 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		5F6FAF7D2F4268DA002F66D8 /* SummarizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarizationView.swift; sourceTree = "<group>"; };
 		5F6FAF7E2F4268DA002F66D8 /* SummarizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarizationViewModel.swift; sourceTree = "<group>"; };
+		5F6FAF822F42B185002F66D8 /* AIGlowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIGlowModifier.swift; sourceTree = "<group>"; };
+		5F6FAF832F42B185002F66D8 /* GlassmorphismStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassmorphismStyle.swift; sourceTree = "<group>"; };
 		5F929A902F393206008A895C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		5F929A922F393206008A895C /* AdaptableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableScrollView.swift; sourceTree = "<group>"; };
 		5F929A932F393206008A895C /* AdaptableStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableStack.swift; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 		5F929AB72F393206008A895C /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				5F6FAF822F42B185002F66D8 /* AIGlowModifier.swift */,
+				5F6FAF832F42B185002F66D8 /* GlassmorphismStyle.swift */,
 				5F929B272F3A64C6008A895C /* AppBorderStyle.swift */,
 				5F929B252F393CB7008A895C /* AppPageStyle.swift */,
 				5F929AB42F393206008A895C /* HideKeyboard.swift */,
@@ -621,6 +627,8 @@
 				5F67BEFE2AACE2BE000A094A /* ContentView.swift in Sources */,
 				5F67BEFC2AACE2BE000A094A /* ParaBulletApp.swift in Sources */,
 				5F929B282F3A64C6008A895C /* AppBorderStyle.swift in Sources */,
+				5F6FAF842F42B185002F66D8 /* GlassmorphismStyle.swift in Sources */,
+				5F6FAF852F42B185002F66D8 /* AIGlowModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
